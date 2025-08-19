@@ -3,472 +3,293 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apel Mahmud | DevOps & Backend Portfolio</title>
-    <!-- Use Inter font from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Apel Mahmud | Full-Stack & DevOps</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body {
-        font-family: "Inter", sans-serif;
+      /* Custom styles for a dark theme and smooth scrolling */
+      html {
         scroll-behavior: smooth;
       }
-
-      /* Custom scrollbar for a better feel in dark mode */
-      ::-webkit-scrollbar {
-        width: 8px;
+      body {
+        background-color: #0d1117; /* Dark GitHub-like background */
+        color: #c9d1d9; /* Light gray text */
       }
-
-      ::-webkit-scrollbar-track {
-        background: #1f2937; /* Gray-800 */
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #4b5563; /* Gray-600 */
-        border-radius: 4px;
+      .hero-bg {
+        background-image: url("./images/programming-contest.jpg");
+        background-size: cover;
+        /* background-position: center; */
       }
     </style>
   </head>
-  <body class="bg-gray-900 text-gray-200">
-    <!-- Header Section -->
+  <body class="font-sans antialiased">
     <header
-      id="home"
-      class="bg-gradient-to-r from-emerald-900 to-emerald-700 text-white py-16 md:py-24 text-center shadow-lg"
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-sm shadow-lg"
     >
-      <div class="container mx-auto px-6">
-        <h1
-          class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-2"
-        >
-          Apel Mahmud
-        </h1>
-        <p class="text-lg sm:text-xl font-light mb-1 text-yellow-300">
-          DevOps & Backend Enthusiast
-        </p>
-        <div
-          class="flex flex-col md:flex-row justify-center items-center md:space-x-4 space-y-2 md:space-y-0 mt-4 text-gray-300 text-sm md:text-base"
-        >
-          <p>Email: apelmahmudcse01@gmail.com</p>
-          <span class="hidden md:inline-block">|</span>
-          <p>Phone: +8801710453438</p>
-          <span class="hidden md:inline-block">|</span>
-          <a
-            href="https://github.com/apl-mhd/problemSolving/"
-            target="_blank"
-            class="text-gray-300 hover:text-white transition-colors"
-            >Problem Solving</a
-          >
-          <span class="hidden md:inline-block">|</span>
-          <a
-            href="https://github.com/apl-mhd/"
-            target="_blank"
-            class="text-gray-300 hover:text-white transition-colors"
-            >GitHub</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-gray-800 shadow-md py-4">
-      <div class="container mx-auto px-6 flex justify-center items-center">
-        <!-- Nav links for desktop -->
-        <div class="hidden md:flex space-x-8">
-          <a
-            href="#about"
-            class="text-gray-300 hover:text-yellow-500 transition-colors"
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-bold text-white">Apel Mahmud</a>
+        <div class="space-x-4 hidden md:flex">
+          <a href="#about" class="hover:text-blue-400 transition-colors"
             >About</a
           >
-          <a
-            href="#projects"
-            class="text-gray-300 hover:text-yellow-500 transition-colors"
+          <a href="#skills" class="hover:text-blue-400 transition-colors"
+            >Skills</a
+          >
+          <a href="#projects" class="hover:text-blue-400 transition-colors"
             >Projects</a
           >
-          <a
-            href="#achievements"
-            class="text-gray-300 hover:text-yellow-500 transition-colors"
+          <a href="#achievements" class="hover:text-blue-400 transition-colors"
             >Achievements</a
           >
-          <a
-            href="#skills"
-            class="text-gray-300 hover:text-yellow-500 transition-colors"
-            >Skill</a
-          >
-          <a
-            href="#contact"
-            class="text-gray-300 hover:text-yellow-500 transition-colors"
+          <a href="#contact" class="hover:text-blue-400 transition-colors"
             >Contact</a
           >
         </div>
+        <div class="md:hidden">
+          <button class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-        <!-- Hamburger menu for mobile -->
-        <button id="menu-btn" class="md:hidden focus:outline-none">
-          <svg
-            class="w-6 h-6 text-gray-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-gray-800 mt-4 mx-6 rounded-lg shadow-md py-4"
-      >
-        <a
-          href="#about"
-          class="block py-2 px-4 text-gray-200 hover:bg-gray-700 rounded-md"
-          >About</a
-        >
-        <a
-          href="#education"
-          class="block py-2 px-4 text-gray-200 hover:bg-gray-700 rounded-md"
-          >Education</a
-        >
+    <section
+      class="hero-bg relative h-screen flex items-center justify-center text-center"
+    >
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="relative z-10 p-6 max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4">
+          Apel Mahmud
+        </h1>
+        <p class="text-2xl md:text-3xl text-gray-300 font-light mb-8">
+          Backend Developer & DevOps Enthusiast
+        </p>
         <a
           href="#projects"
-          class="block py-2 px-4 text-gray-200 hover:bg-gray-700 rounded-md"
-          >Projects</a
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full transition-colors duration-300 transform hover:scale-105"
         >
-        <a
-          href="#achievements"
-          class="block py-2 px-4 text-gray-200 hover:bg-gray-700 rounded-md"
-          >Achievements</a
-        >
-        <a
-          href="#contact"
-          class="block py-2 px-4 text-gray-200 hover:bg-gray-700 rounded-md"
-          >Contact</a
-        >
+          View My Work
+        </a>
       </div>
-    </nav>
+    </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-16 space-y-20">
-      <!-- About Section -->
-      <section
-        id="about"
-        class="bg-gray-800 p-8 md:p-12 rounded-3xl shadow-xl transform transition-transform duration-300 hover:scale-[1.01]"
-      >
-        <h2 class="text-3xl font-bold text-center mb-6 text-emerald-500">
-          About Myself
-        </h2>
-        <p
-          class="text-center max-w-2xl mx-auto text-lg leading-relaxed text-gray-300"
-        >
+    <section id="about" class="py-20 bg-gray-900">
+      <div class="container mx-auto px-4 text-center max-w-4xl">
+        <h2 class="text-4xl font-bold mb-6 text-white">About Me</h2>
+        <p class="text-lg leading-relaxed text-gray-300">
           Hello! My name is Apel Mahmud. I am a CSE graduate from United
-          International University and a tech-savvy individual who loves Python,
-          JavaScript, and cloud infrastructure. I enjoy solving problems and
-          building efficient, scalable solutions. I am passionate about DevOps,
-          automation, and backend web development.
+          International University and a tech-savvy individual who loves
+          <span class="text-blue-400">Python</span>,
+          <span class="text-blue-400">JavaScript</span>, and cloud
+          infrastructure. I enjoy solving problems and building efficient,
+          scalable solutions. I am passionate about
+          <span class="text-blue-400">DevOps</span>, automation, and backend web
+          development.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <!-- Projects Section -->
-      <section id="projects">
-        <h2 class="text-3xl font-bold text-center mb-8 text-emerald-500">
-          Projects & Deployments
+    <section id="skills" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-10 text-white">
+          Technical Skills
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Edu Hub Card -->
-          <div
-            class="bg-gray-800 p-8 rounded-3xl shadow-xl flex flex-col justify-between transform transition-transform duration-300 hover:scale-[1.01]"
-          >
-            <div>
-              <h5 class="text-xl font-semibold mb-2 text-slate-200">Edu Hub</h5>
-              <p class="text-gray-300 mb-4">
-                A student management system. Dockerized this app and deployed on
-                AWS. Implemented CI/CD pipeline.
-              </p>
-              <p class="text-sm font-medium text-gray-400">
-                <strong>Tech Stack:</strong> Django, Vue.js
-              </p>
-            </div>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
-              <a
-                href="http://3.89.205.102:3000"
-                target="_blank"
-                class="flex items-center gap-2 bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300 text-center"
-              >
-                <!-- SVG for AWS Live Link (Cloud Icon) -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"
-                  />
-                </svg>
-                <span>AWS live link</span>
-              </a>
-              <a
-                href="https://github.com/apl-mhd/edu-hub"
-                target="_blank"
-                class="flex items-center gap-2 bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300 text-center"
-              >
-                <!-- SVG for GitHub Repo -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.82-.256.82-.577 0-.285-.011-1.04-.016-2.043-3.328.72-4.02-1.609-4.02-1.609-.544-1.381-1.327-1.749-1.327-1.749-1.087-.745.083-.73.083-.73 1.205.084 1.839 1.237 1.839 1.237 1.07 1.835 2.809 1.305 3.492.997.108-.775.419-1.305.762-1.609-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.236-3.22-.124-.303-.535-1.52.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.008-.404 1.025.005 2.051.138 3.008.404 2.291-1.552 3.297-1.23 3.297-1.23.652 1.655.241 2.873.118 3.176.771.84 1.236 1.91 1.236 3.22 0 4.613-2.802 5.625-5.475 5.922.42.364.811 1.05.811 2.115 0 1.53-.015 2.756-.015 3.132 0 .323.219.69.825.576C20.565 21.792 24 17.29 24 12c0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-                <span>GitHub Repo</span>
-              </a>
-            </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400">
+              Programming Languages
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>Shell Scripting (Bash)</li>
+            </ul>
           </div>
 
-          <!-- Problem Solving Card (New) -->
-          <div
-            class="bg-gray-800 p-8 rounded-3xl shadow-xl flex flex-col justify-between transform transition-transform duration-300 hover:scale-[1.01]"
-          >
-            <div>
-              <h5 class="text-xl font-semibold mb-2 text-slate-200">
-                Problem Solving
-              </h5>
-              <p class="text-gray-300 mb-4">
-                A collection of problem-solving solutions in various programming
-                languages.
-              </p>
-              <p class="text-sm font-medium text-gray-400">
-                <strong>Tech Stack:</strong> Python, C++, Data Structures &
-                Algorithms
-              </p>
-            </div>
-            <a
-              href="https://github.com/apl-mhd/problemSolving/"
-              target="_blank"
-              class="mt-6 inline-block text-center bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300"
-            >
-              View GitHub
-            </a>
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400">
+              Web Frameworks
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+              <li>Django</li>
+              <li>FastAPI</li>
+              <li>Vue.js</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400">
+              Cloud & DevOps
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+              <li>AWS (EC2, S3, RDS)</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>Jenkins, CI/CD Pipelines</li>
+              <li>Git, Terraform</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400">Databases</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Achievements Section -->
-      <section id="achievements">
-        <h2 class="text-3xl font-bold text-center mb-8 text-emerald-500">
-          Achievements
+    <section id="projects" class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+          My Projects
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- UIU Programming Contest Card -->
+        <div class="grid md:grid-cols-2 gap-8">
           <div
-            class="bg-gray-800 p-8 rounded-3xl shadow-xl transform transition-transform duration-300 hover:scale-[1.01] text-center"
+            class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col justify-between"
           >
-            <img
-              src="./images/programming-contest.jpg"
-              alt="UIU Inter-University Programming Contest Award"
-              class="mx-auto rounded-lg mb-4 shadow-lg"
-            />
-            <h5 class="text-xl font-semibold mb-2 text-slate-200">
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Edu Hub</h3>
+              <p class="text-gray-400 mb-4">
+                A full-stack project built with Django and Vue.js, hosted on
+                AWS. It demonstrates my skills in backend development, front-end
+                integration, and cloud deployment.
+              </p>
+            </div>
+            <div class="mt-auto">
+              <a
+                href="http://3.89.205.102:3000/"
+                target="_blank"
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300"
+              >
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/your-repo-link"
+                target="_blank"
+                class="inline-block ml-4 text-blue-400 hover:text-blue-300 font-bold py-2 px-6 rounded-full border border-blue-400 transition-colors duration-300"
+              >
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Problem Solving</h3>
+              <p class="text-gray-400 mb-4">
+                A comprehensive collection of my solutions to data structures
+                and algorithm problems, showcasing my ability to tackle complex
+                challenges.
+              </p>
+            </div>
+            <div class="mt-auto">
+              <a
+                href="https://github.com/apl-mhd/problemSolving/"
+                target="_blank"
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300"
+              >
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-10 text-white">Achievements</h2>
+        <div class="grid md:grid-cols-2 gap-8 mx-auto">
+          <div
+            class="bg-gray-700 p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+          >
+            <img src="./images/programming-contest.jpg" alt="Trophy icon" />
+            <h3 class="font-bold text-xl text-blue-400 mb-2">
               UIU Inter-University Programming Contest
-            </h5>
+            </h3>
             <p class="text-gray-300">
               Secured 4th place among competitive participants.
             </p>
           </div>
 
-          <!-- UIU Project Showcasing Card -->
           <div
-            class="bg-gray-800 p-8 rounded-3xl shadow-xl transform transition-transform duration-300 hover:scale-[1.01] text-center"
+            class="bg-gray-700 p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
           >
-            <img
-              src="./images/project-showcasing.jpg"
-              alt="UIU Project Showcasing Award"
-              class="mx-auto rounded-lg mb-4 shadow-lg"
-            />
-            <h5 class="text-xl font-semibold mb-2 text-slate-200">
+            <img src="./images/project-showcasing.jpg" alt="Award icon" />
+            <h3 class="font-bold text-xl text-blue-400 mb-2">
               UIU Project Showcasing
-            </h5>
+            </h3>
             <p class="text-gray-300">
               Runner-up award for innovative project presentation.
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Skills Section (New) -->
-      <section id="skills">
-        <h2 class="text-3xl font-bold text-center mb-8 text-emerald-500">
-          Technical Skills
-        </h2>
-        <div
-          class="bg-gray-800 p-8 rounded-3xl shadow-xl transform transition-transform duration-300 hover:scale-[1.01]"
-        >
-          <div class="mb-8">
-            <h3 class="text-xl font-semibold mb-4 text-slate-200">
-              DevOps & Cloud
-            </h3>
-            <div class="flex flex-wrap gap-3">
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Docker</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Kubernetes</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >AWS</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >CI/CD</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Jenkins</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Git</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Linux</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Terraform</span
-              >
-              <span
-                class="bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Ansible</span
-              >
-            </div>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-4 text-slate-200">
-              Programming & Frameworks
-            </h3>
-            <div class="flex flex-wrap gap-3">
-              <span
-                class="bg-yellow-500 text-gray-900 text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Python</span
-              >
-              <span
-                class="bg-yellow-500 text-gray-900 text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Django</span
-              >
-              <span
-                class="bg-yellow-500 text-gray-900 text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Flask</span
-              >
-              <span
-                class="bg-yellow-500 text-gray-900 text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >JavaScript</span
-              >
-              <span
-                class="bg-yellow-500 text-gray-900 text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >Vue.js</span
-              >
-              <span
-                class="bg-yellow-500 text-gray-900 text-sm font-medium px-4 py-2 rounded-full shadow-md"
-                >C++</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Photo Gallery for Awards -->
-      <!-- <section id="award-gallery">
-            <h2 class="text-3xl font-bold text-center mb-8 text-emerald-500">Award Gallery</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <a href="https://placehold.co/800x600/14532d/facc15?text=Award+1" target="_blank" class="block w-full h-full overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x300/14532d/facc15?text=Award+1" alt="Award 1" class="w-full h-full object-cover">
-                </a>
-                <a href="https://placehold.co/800x600/14532d/facc15?text=Award+2" target="_blank" class="block w-full h-full overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x300/14532d/facc15?text=Award+2" alt="Award 2" class="w-full h-full object-cover">
-                </a>
-                <a href="https://placehold.co/800x600/14532d/facc15?text=Award+3" target="_blank" class="block w-full h-full overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x300/14532d/facc15?text=Award+3" alt="Award 3" class="w-full h-full object-cover">
-                </a>
-                <a href="https://placehold.co/800x600/14532d/facc15?text=Award+4" target="_blank" class="block w-full h-full overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x300/14532d/facc15?text=Award+4" alt="Award 4" class="w-full h-full object-cover">
-                </a>
-                <a href="https://placehold.co/800x600/14532d/facc15?text=Award+5" target="_blank" class="block w-full h-full overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x300/14532d/facc15?text=Award+5" alt="Award 5" class="w-full h-full object-cover">
-                </a>
-                <a href="https://placehold.co/800x600/14532d/facc15?text=Award+6" target="_blank" class="block w-full h-full overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x300/14532d/facc15?text=Award+6" alt="Award 6" class="w-full h-full object-cover">
-                </a>
-            </div>
-        </section> -->
-
-      <!-- Contact Section -->
-      <section id="contact">
-        <h2 class="text-3xl font-bold text-center mb-8 text-emerald-500">
-          Contact Me
-        </h2>
-        <div
-          class="bg-gray-800 p-8 md:p-12 rounded-3xl shadow-xl text-center max-w-lg mx-auto transform transition-transform duration-300 hover:scale-[1.01]"
-        >
-          <p class="text-lg mb-6 text-gray-300">
-            I'm always open to new opportunities and collaborations. Feel free
-            to reach out!
+    <section id="contact" class="py-20 bg-gray-900">
+      <div class="container mx-auto px-4 text-center max-w-2xl">
+        <h2 class="text-4xl font-bold mb-6 text-white">Get in Touch</h2>
+        <div class="space-y-4">
+          <p class="text-lg text-gray-300">
+            Feel free to reach out to me via email or phone. I'm always open to
+            new opportunities and collaborations.
           </p>
-          <div class="flex flex-wrap justify-center gap-4">
+          <div
+            class="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-center md:space-x-8 mt-8"
+          >
             <a
               href="mailto:apelmahmudcse01@gmail.com"
-              class="bg-emerald-900 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:bg-emerald-800 transition-colors duration-300"
-              >Email</a
+              class="text-blue-400 hover:text-blue-300 transition-colors"
             >
+              <span class="font-semibold block text-xl">Email</span>
+              apelmahmudcse01@gmail.com
+            </a>
             <a
-              href="https://www.linkedin.com/in/yourprofile"
-              target="_blank"
-              class="bg-yellow-500 text-gray-900 font-medium py-3 px-6 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300"
-              >LinkedIn</a
+              href="tel:+8801710453438"
+              class="text-blue-400 hover:text-blue-300 transition-colors"
             >
+              <span class="font-semibold block text-xl">Phone</span>
+              +8801710453438
+            </a>
             <a
               href="https://github.com/apl-mhd/"
               target="_blank"
-              class="bg-gray-700 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:bg-gray-900 transition-colors duration-300"
-              >GitHub</a
+              class="text-blue-400 hover:text-blue-300 transition-colors"
             >
+              <span class="font-semibold block text-xl">GitHub</span>
+              apl-mhd
+            </a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-emerald-900 text-gray-400 py-8 text-center mt-20">
-      &copy; 2025 Apel Mahmud | DevOps & Backend Portfolio
+    <footer class="py-6 bg-gray-900 text-center text-gray-500 text-sm">
+      <p>&copy; 2025 Apel Mahmud. All Rights Reserved.</p>
     </footer>
-
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-      document
-        .getElementById("menu-btn")
-        .addEventListener("click", function () {
-          document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
-    </script>
   </body>
 </html>
